@@ -15,6 +15,10 @@ mkdir /opt/ninja/config/limitless-ninja
 
 cp /opt/ninja/drivers/limitless-ninja/limitless/* /opt/ninja/config/limitless-ninja
 
+edit the config.json file to update your ip addresses in /opt/ninja/config/limitless-ninja
+
+
+
 sudo service ninjablock restart
 
 
