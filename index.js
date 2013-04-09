@@ -5,9 +5,6 @@ var LimitlessWhite = require('./lib/limitlesswhite')
   , events = require('events')
   , stream = require('stream');
 
-var LimitlessLEDRGB = require('./lib/LimitlessLEDRGB')
-  , util = require('util')
-  , stream = require('stream');
   
 // Give our module a stream interface
 util.inherits(myModule,stream);
@@ -52,7 +49,6 @@ function myModule(opts,app) {
          {
             var n = url.split('.');
             var eventEmitter = new events.EventEmitter();
-            self.emit('register', new LimitlessLEDRGB(url,n[3]));
             
             for(var i = 0; i < 5; i++) {
                light =  new LimitlessWhite(i,url,n[3],index,eventEmitter)
